@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root {
+  --primary-font: "Permanent Marker", cursive;
+  --secondary-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* --tertiary-font:  */
+
+  --color-1: #00082d;
+  --color-2: #00e804;
+  --color-3: #ffffff;
+  --color-4: #272727;
+  --color-5: #3737377d;
+  --color-6: #8888ff;
+  --color-7: #ffff00;
+  --color-8: #9b9b9b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-1);
+  color: white;
+  animation: grow 0.8s ease-out forwards;
+}
+
+button,
+a {
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  color: var(--color-4);
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__header {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  padding: 2.5rem;
+  background-color: var(--color-4);
+}
+
+.container__header__title {
+  font-family: var(--primary-font);
+  color: var(--color-7);
+  width: 100%;
+  font-size: 140%;
+}
+
+.container__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6rem;
+  background-color: var(--color-5);
+  border-radius: 3rem;
+  width: 90%;
+}
+
+.container__main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 12%;
+}
+
+.container__main__content__title {
+  font-family: var(--secondary-font);
+}
+
+.container__main__content__products {
+  gap: 3rem;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container__main__content__products__product {
+  background-color: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  padding: 9%;
+  gap: 5%;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  border-radius: 2rem;
+  transition: 300ms;
+  align-items: center;
+}
+
+.container__main__content__products__product:hover {
+  transform: scale(1.05);
+  background-color: var(--color-8);
+  color: var(--color-3);
+}
+
+.container__main__content__products__product__discount {
+  color: var(--color-7);
+  background-color: var(--color-2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.container__main__content__products__product__image {
+  width: 70%;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.container__main__content__products__product__price {
+  color: var(--color-2);
+}
+
+.container__main__content__products__product__title {
+  font-size: 100%;
+}
+
+.container__footer {
+  background-color: var(--color-4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3rem;
+  gap: 1rem;
+}
+
+.container__footer__title {
+  font-family: var(--secondary-font);
+  font-size: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.container__footer__link {
+  color: var(--color-2);
+  background-color: var(--color-7);
+  padding: 1rem;
+  margin: 0.6rem;
+  border-radius: 1rem;
+  transition: 300ms;
+}
+
+.container__footer__link:hover {
+  color: var(--color-3);
+  background-color: var(--color-2);
+}
+
+@media screen and (max-width: 750px) {
+  .container__main__content__products {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .container__header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .container__main {
+    width: 90%;
+  }
+
+  .container__main__content__products__product {
+    border-radius: 1rem;
+  }
+
+  .container__main__content__products__product__discount {
+    font-size: 70%;
+  }
+
+  .container__main__content__products__product__image {
+    width: 60%;
+  }
+
+  .container__main__content__products__product__price {
+    font-size: 60%;
+  }
+
+  .container__main__content__products__product__title {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container__header__title {
+    font-size: 60%;
+  }
+
+  .container__main__content__products__product__title {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container__main__content__products {
+    grid-template-columns: 1fr;
+  }
+}
