@@ -3,6 +3,7 @@ let productDiscount = 0;
 let productPrice = "";
 let productLink = "";
 let productImage = "";
+let displayOnOff = "";
 
 function newProduct(
   nameId,
@@ -15,7 +16,8 @@ function newProduct(
   discountValue,
   imageValue,
   imgAltValue,
-  linkValue
+  linkValue,
+  displayStatus
 ) {
   productTitle = document.getElementById(nameId);
   productPrice = document.getElementById(priceId);
@@ -29,6 +31,7 @@ function newProduct(
   productImage.src = imageValue;
   productImage.alt = imgAltValue;
   productLink.href = linkValue;
+  productLink.style.display = displayStatus;
 }
 
 /*Model:
@@ -74,9 +77,9 @@ newProduct(
 
   /*Name*/ "Carregador Portatil 3x Usb-c Samsung",
 
-  /*Price*/ "219,00",
+  /*Price*/ "219,50",
 
-  /*Discount*/ 50,
+  /*Discount*/ 4,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_943434-MLB76089171634_052024-F-carregador-portatil-3x-usb-c-20000mah-super-rapida-45w.webp",
 
@@ -122,9 +125,9 @@ newProduct(
 
   /*Name*/ "Kit Wella Pro Invigo Enrich Shampoo 1l + Condicionador 1l",
 
-  /*Price*/ "303,90",
+  /*Price*/ "263,98",
 
-  /*Discount*/ 51,
+  /*Discount*/ 58,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_840556-MLB49014287471_022022-F-kit-wella-pro-invigo-enrich-shampoo-1l-condicionador-1l.webp",
 
@@ -247,9 +250,9 @@ newProduct(
 
   /*Name*/ "Mini Projetor Portátil 4k Android Full Hd Smart Wifi Cinema",
 
-  /*Price*/ "220,93",
+  /*Price*/ "214,13",
 
-  /*Discount*/ 35,
+  /*Discount*/ 37,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_704055-MLB77188553035_062024-F-mini-projetor-portatil-4k-android-full-hd-smart-wifi-cinema.webp",
 
@@ -272,9 +275,9 @@ newProduct(
 
   /*Name*/ "Fritadeira De Ar Af-35-bf Air Fryer 3,5l Preta Mondial 110v",
 
-  /*Price*/ "239,90",
+  /*Price*/ "231,83",
 
-  /*Discount*/ 38,
+  /*Discount*/ 41,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_836626-MLA83426146719_032025-F.webp",
 
@@ -305,7 +308,9 @@ newProduct(
 
   /*Image Description*/ "Imagem de um Samsung Galaxy A35 5G Dual SIM 256GB 8 GB RAM Azul-Escuro",
 
-  /*Link*/ "https://mercadolivre.com/sec/2HFMVuL"
+  /*Link*/ "https://mercadolivre.com/sec/2HFMVuL",
+
+  "none"
 
   //===================================================================================================================
 );
@@ -322,11 +327,11 @@ newProduct(
 
   /*Name*/ "Tênis Casual Feminino Vl Court Base adidas",
 
-  /*Price*/ "256,99",
+  /*Price*/ "245,99",
 
-  /*Discount*/ 26,
+  /*Discount*/ 29,
 
-  /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_761272-MLB75451898019_032024-F-tnis-casual-feminino-vl-court-base-adidas.webp",
+  /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_634464-MLB77429732885_072024-F-tnis-casual-feminino-vl-court-base-adidas.webp",
 
   /*Image Description*/ "Imagem de um Tênis Casual Feminino Vl Court Base adidas",
 
@@ -355,7 +360,8 @@ newProduct(
 
   /*Image Description*/ "Imagem de um Projetor Hy320 Smart Tv Mini Wifi6 390ansi Android 110v/220v Davely de Cor Preta",
 
-  /*Link*/ "https://mercadolivre.com/sec/2QJMbah"
+  /*Link*/ "https://mercadolivre.com/sec/2QJMbah",
+  "none"
 
   //===================================================================================================================
 );
@@ -372,7 +378,7 @@ newProduct(
 
   /*Name*/ "Samsung Galaxy A15 4G Dual SIM 128 GB Azul-claro 4 GB RAM",
 
-  /*Price*/ "854,01",
+  /*Price*/ "854,10",
 
   /*Discount*/ 20,
 
@@ -397,9 +403,9 @@ newProduct(
 
   /*Name*/ "Nebulizador e Inalador 127/220V Super Flow Compact DC1 G-Tech",
 
-  /*Price*/ "89,19",
+  /*Price*/ "85,90",
 
-  /*Discount*/ 22,
+  /*Discount*/ 25,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_722962-MLA84542458126_052025-F.webp",
 
@@ -422,9 +428,9 @@ newProduct(
 
   /*Name*/ 'Smartphone Samsung Galaxy A05s 4G 128GB 6GB RAM Câmera Traseira Tripla 50MP + 2MP + 2MP + Selfie 13MP Tela 6.7" Preto',
 
-  /*Price*/ "827,10",
+  /*Price*/ "782,56",
 
-  /*Discount*/ 30,
+  /*Discount*/ 21,
 
   /*Image Address*/ "https://http2.mlstatic.com/D_NQ_NP_2X_625221-MLA80510942192_112024-F.webp",
 
